@@ -25,8 +25,7 @@ class Form extends Component {
             email
         }
 
-        async function postData() {
-            
+        const postData = async () => {
             const result = await fetch(`${process.env.REACT_APP_API_URL}/sendData`, {
                 method: "POST",
                 mode: 'cors',
@@ -39,14 +38,19 @@ class Form extends Component {
             )
             
             const resultData = await result.json()
-
+            this.reset()
         }
+
         postData()
-        
-        
-        
     }
     
+    reset(){
+        this.setState({
+            lastname: '',
+            firstname: '',
+            email:''
+            })
+        }
 
     render() { 
         const { lastname, firstname, email } = this.state;
