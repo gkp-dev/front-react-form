@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    font-size: 1.5em;
+    .input-field {
+        margin-bottom: 20px;
+    }
+    input {
+        margin-top: 5px;
+        width: 60%;
+        padding: 10px;
+    }
+}
